@@ -1,18 +1,33 @@
 <?php
 function vero(){
-    $vero='false';
-    $array= [1,2,3,5,7,3,4];
+    $vero='vero';
+    $array= [1,1,2,1,7,1,3];
+    $array2=[];
+    $variabile=0;
     for ($i=0; $i<count($array);$i++){
-        if ($array[$i]==1 and $array[$i]==3){
-              $vero='false';
-              
+        if ($array[$i]==1 || $array[$i]==3){
+        $variabile=$array[$i];
+        array_push($array2,$variabile);       
         }
-        else{
-            $vero='true';
-        }
-        
+
+     
 
     }
+    $esiste3=false;
+    $esiste1=false;
+  
+    for ($i=0; $i<count($array2);$i++){
+       if($array2[$i]==1){
+        $esiste1=true;
+       }
+       if($array2[$i]==3){
+        $esiste3=true;
+       }
+    }
+if ($esiste1=='true' && $esiste3=='true'){
+    $vero='false';
+}
+
     return $vero;
  
 }
