@@ -2,13 +2,14 @@
 
 
 function dopoIl4(){
-$array=[8,14,2,4,6,21];
+$array=[8,14,2,4,6,21,4,3,4,3];
 $array2=[];
 $in4=0;
 $variabile=0;
  for ($i=0; $i<count($array); $i++){
      if($array[$i] == 4){
       $in4=$i;
+      break;
      }
  }
  for ($i=$in4+1; $i<count($array);$i++){
