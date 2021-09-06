@@ -1,22 +1,22 @@
 <?php
-$array=[1,2,6,9,13,15,5];
+$array=[1,2,3,6,13,15,4,27,30,4];
 $multipliTre=[];
-$media=0;
+
 $somma=0;
-$countArrayDiv3=0;
+$grandezza=0;
+echo "i numeri divisibili per 3 sono: " ;
 for ($i=0; $i<count($array);$i++){
     if($array[$i] % 3 == 0){
         
-        $countArrayDiv3=count($array) -1;
-        $multipliTre=$array[$i];
-        $somma= $array[$i] + $media;
-        
-        echo ("<br>" );
-        echo "i numeri divisibili per 3 sono: " . $multipliTre;
+    $grandezza++;
+    echo "<br>";
+    echo $array[$i];
+    $somma= $array[$i] + $somma;
       
     }
 }
-$media= $somma/$countArrayDiv3;
+
+$media= $somma/$grandezza;
 echo ("<br>");
 echo "la media è: " . $media;
 
